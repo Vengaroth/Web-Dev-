@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título principal: aparece en la pestaña del navegador -->
+  <title>Hotel Altavista | Reservaciones</title>
+
+  <!-- 1) CSS EXTERNO -->
+<link rel="stylesheet" href="styles.css">
+
+  <!-- 2) CSS INTERNO: reglas propias solo de esta página -->
+  <style>
+    .aviso {
+      background-color: #fff4e5;
+      border-left: 6px solid #b5523b;
+      padding: 12px 16px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__contenido">
+      <h1>Hotel Altavista</h1>
+      <p class="lema">Descanso, buena comida y vistas que no se olvidan</p>
+      <nav>
+        <ul class="menu">
+          <li><a href="#habitaciones">Habitaciones</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#reservar">Reservar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <!-- ===== BIENVENIDA: párrafos, imagen y salto de línea ===== -->
+    <section class="bienvenida tarjeta">
+      <img src="img/hotel.svg" alt="Fachada ilustrada del Hotel Altavista" class="imagen-principal">
+      <div>
+        <h2>Bienvenido a nuestra página de reservaciones</h2>
+        <p>Desde esta página puede consultar nuestras habitaciones, conocer los servicios incluidos
+          y <strong>apartar su estancia</strong> en pocos minutos.</p>
+        <p>Recepción abierta las 24 horas.<br>
+           Check-in: 15:00 h<br>
+           Check-out: 12:00 h</p>
+        <!-- 3) CSS EN LÍNEA: estilo aplicado solo a este elemento -->
+        <p style="color:#3e5a40; font-style:italic;">Reserve con 15 días de anticipación y obtenga 10% de descuento.</p>
+      </div>
+    </section>
+
+    <!-- ===== TABLA DE HABITACIONES ===== -->
+    <section id="habitaciones" class="tarjeta">
+      <h2>Tipos de habitación</h2>
+      <div class="habitaciones">
+        <img src="img/habitacion.svg" alt="Ilustración de una habitación del hotel" class="imagen-habitacion">
+        <table class="tabla">
+          <caption>Tarifas por noche (impuestos incluidos)</caption>
+          <thead>
+            <tr>
+              <th>Tipo de habitación</th>
+              <th>Nº de personas</th>
+              <th>Precio por noche</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sencilla</td><td>1</td><td>$900 MXN</td></tr>
+            <tr><td>Doble</td><td>2</td><td>$1,200 MXN</td></tr>
+            <tr><td>Triple</td><td>3</td><td>$1,650 MXN</td></tr>
+            <tr><td>Suite</td><td>2</td><td>$2,500 MXN</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== LISTAS ===== -->
+    <section id="servicios" class="tarjeta servicios">
+      <div>
+        <h2>Servicios incluidos</h2>
+        <!-- Lista desordenada -->
+        <ul class="lista-servicios">
+          <li>Wi-Fi gratuito en todo el hotel</li>
+          <li>Alberca climatizada</li>
+          <li>Gimnasio abierto de 6:00 a 22:00 h</li>
+          <li>Servicio a la habitación</li>
+        </ul>
+      </div>
+      <div>
+        <h2>¿Cómo reservar?</h2>
+        <!-- Lista ordenada -->
+        <ol class="lista-pasos">
+          <li>Llene sus datos personales.</li>
+          <li>Elija fechas y tipo de habitación.</li>
+          <li>Seleccione los extras que desee.</li>
+          <li>Presione <em>¡Reservar!</em> y espere su confirmación por correo.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== FORMULARIO ===== -->
+    <section id="reservar" class="tarjeta">
+      <h2>Formulario de reservación</h2>
+      <p class="aviso">Los campos marcados con <span class="obligatorio">*</span> son obligatorios.</p>
+
+      <form class="formulario" action="#" method="post">
+        <fieldset>
+          <legend>Datos del huésped</legend>
+          <div class="campo">
+            <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="campo">
+            <label for="apellidos">Apellidos <span class="obligatorio">*</span></label>
+            <input type="text" id="apellidos" name="apellidos" required>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail <span class="obligatorio">*</span></label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="33 1234 5678">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalles de la estancia</legend>
+          <div class="campo">
+            <label for="entrada">Fecha de entrada <span class="obligatorio">*</span></label>
+            <input type="date" id="entrada" name="entrada" required>
+          </div>
+          <div class="campo">
+            <label for="salida">Fecha de salida <span class="obligatorio">*</span></label>
+            <input type="date" id="salida" name="salida" required>
+          </div>
+
+          <p class="etiqueta-grupo">Tipo de habitación:</p>
+          <div class="opciones">
+            <label><input type="radio" name="habitacion" value="sencilla"> Sencilla</label>
+            <label><input type="radio" name="habitacion" value="doble" checked> Doble</label>
+            <label><input type="radio" name="habitacion" value="triple"> Triple</label>
+            <label><input type="radio" name="habitacion" value="suite"> Suite</label>
+          </div>
+
+          <!-- CHECKBOXES -->
+          <p class="etiqueta-grupo">Extras opcionales:</p>
+          <div class="opciones opciones--columna">
+            <label><input type="checkbox" name="extras" value="desayuno"> Incluir desayuno (+$180 MXN/día)</label>
+            <label><input type="checkbox" name="extras" value="estacionamiento"> Estacionamiento (+$120 MXN/día)</label>
+            <label><input type="checkbox" name="extras" value="spa"> Acceso al spa (+$350 MXN/día)</label>
+          </div>
+        </fieldset>
+
+        <div class="campo campo--completo">
+          <label for="comentarios">Comentarios sobre su reserva</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escriba aquí sus comentarios"></textarea>
+        </div>
+
+        <div class="botones">
+          <button type="submit" class="boton boton--principal">¡Reservar!</button>
+          <button type="reset" class="boton boton--secundario">Limpiar formulario</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="pie">
+    <p>&copy; 2026 Hotel Altavista · Actividad de Programación Web, semana 3</p>
+  </footer>
+
+</body>
+</html>

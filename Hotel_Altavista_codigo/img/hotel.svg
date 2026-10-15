@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6c28b"/>
+      <stop offset="1" stop-color="#f3e3cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky)"/>
+  <circle cx="640" cy="120" r="55" fill="#f9a66c"/>
+  <path d="M0 330 Q200 260 400 320 T800 300 V450 H0Z" fill="#7c9a7e"/>
+  <rect x="230" y="140" width="340" height="230" fill="#f8f4ee" stroke="#1f3a4d" stroke-width="4"/>
+  <polygon points="210,145 400,70 590,145" fill="#b5523b"/>
+  <g fill="#1f3a4d">
+    <rect x="260" y="175" width="50" height="45"/><rect x="335" y="175" width="50" height="45"/>
+    <rect x="415" y="175" width="50" height="45"/><rect x="490" y="175" width="50" height="45"/>
+    <rect x="260" y="245" width="50" height="45"/><rect x="490" y="245" width="50" height="45"/>
+  </g>
+  <rect x="360" y="270" width="80" height="100" fill="#b5523b"/>
+  <rect x="300" y="110" width="200" height="28" fill="#1f3a4d"/>
+  <text x="400" y="130" font-family="Georgia, serif" font-size="18" fill="#f8f4ee" text-anchor="middle">HOTEL ALTAVISTA</text>
+  <path d="M120 370 v-70 M120 300 q-30 -10 -40 10 M120 300 q30 -10 40 10 M120 300 q-10 -30 -30 -30 M120 300 q10 -30 30 -30" stroke="#3e5a40" stroke-width="6" fill="none"/>
+  <path d="M680 370 v-70 M680 300 q-30 -10 -40 10 M680 300 q30 -10 40 10 M680 300 q-10 -30 -30 -30 M680 300 q10 -30 30 -30" stroke="#3e5a40" stroke-width="6" fill="none"/>
+</svg>
